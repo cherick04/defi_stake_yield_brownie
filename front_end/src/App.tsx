@@ -8,7 +8,11 @@ function App() {
   return (
     <DAppProvider config={{
       // supportedChains: [ChainId.Kovan, ChainId.Rinkeby]
-      networks: [Kovan]
+      networks: [Kovan],
+      notifications: {
+        expirationPeriod: 1000,
+        checkInterval: 1000
+      }
     }}>
       <Header/>
       <Container maxWidth="md">
